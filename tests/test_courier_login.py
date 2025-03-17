@@ -25,7 +25,7 @@ class TestCourierLogin:
         courier_data[key] = value
         currier_resp = requests.post(Urls.URL_courier_login, data=courier_data)
         assert currier_resp.status_code == 404 and currier_resp.json()[
-            "message"] == data.Response.response_account_not_found
+            "message"] == data.Response.RESPONSE_ACCOUNT_NOT_FOUND
 
     @allure.title('Проверка получения ошибки аутентификации курьера с пустым полем логина или пароля')
     @allure.description('В тест по очереди передаются наборы данных с пустым логином или паролем. '
@@ -35,4 +35,4 @@ class TestCourierLogin:
         courier_data[key] = value
         currier_resp = requests.post(Urls.URL_courier_login, data=courier_data)
         assert currier_resp.status_code == 400 and currier_resp.json()[
-            "message"] == data.Response.response_no_data_input
+            "message"] == data.Response.RESPONSE_NO_DATA_INPUT

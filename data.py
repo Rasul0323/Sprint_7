@@ -23,19 +23,19 @@ class OrderData:
 
 class Response:
     #Запрос с несуществующей парой логин-пароль:
-    response_account_not_found = 'Учетная запись не найдена'
+    RESPONSE_ACCOUNT_NOT_FOUND = 'Учетная запись не найдена'
 
     #Запрос без логина или пароля:
-    response_no_data_input = 'Недостаточно данных для входа'
+    RESPONSE_NO_DATA_INPUT = 'Недостаточно данных для входа'
 
     #Запрос без логина или пароля:
-    response_no_data_account = 'Недостаточно данных для создания учетной записи'
+    RESPONSE_NO_DATA_ACCOUNT = 'Недостаточно данных для создания учетной записи'
 
     #Запрос с повторяющимся логином:
-    response_login_used = 'Этот логин уже используется. Попробуйте другой.'
+    RESPONSE_LOGIN_USED = 'Этот логин уже используется. Попробуйте другой.'
 
     #Успешное создание учетной записи:
-    response_registration_successful = '{"ok":true}'
+    RESPONSE_REGISTRATION_SUCCESSFUL = '{"ok":true}'
 
 class LimitPageOrders:
 
